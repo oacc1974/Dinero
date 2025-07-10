@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize EmailJS
     initEmailJS();
     
-    // Track page view with Facebook Pixel
+    // Track page view with Meta Pixel
     fbq('track', 'PageView');
     
-    // Track CTA button clicks
+    // Track CTA button clicks with Meta Pixel
     trackCTAClicks();
     
     // Initialize stock counter
@@ -63,7 +63,7 @@ function initEmailJS() {
     
     purchaseButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            // Track purchase click with Facebook Pixel
+            // Track purchase click with Meta Pixel
             fbq('track', 'InitiateCheckout');
             
             // You can also send an email notification when someone clicks the purchase button
@@ -85,7 +85,7 @@ function initEmailJS() {
     });
 }
 
-// Track CTA Button Clicks with Facebook Pixel
+// Track CTA Button Clicks with Meta Pixel
 function trackCTAClicks() {
     const ctaButtons = document.querySelectorAll('.btn-cta, .btn-cta-large');
     
@@ -210,7 +210,7 @@ function initPurchaseNotifications() {
 function handleFormSubmit(event) {
     event.preventDefault();
     
-    // Track form submission with Facebook Pixel
+    // Track form submission with Meta Pixel
     fbq('track', 'CompleteRegistration');
     
     // Get form data
